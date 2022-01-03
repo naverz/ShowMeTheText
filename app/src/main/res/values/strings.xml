@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ShowMeTheText</string>
+    <string name="percent">%s %%</string>
+</resources>

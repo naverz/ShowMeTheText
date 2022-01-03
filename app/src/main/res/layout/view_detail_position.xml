@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        >
+
+        <FrameLayout
+            android:id="@+id/top_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/zepeto_oval"
+            app:layout_constraintBottom_toTopOf="@id/center_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/outline_expand_less_white_36"
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/left_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/zepeto_oval"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/center_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/outline_chevron_left_white_36"
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/right_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/zepeto_oval"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/center_button"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/outline_chevron_right_white_36"
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/bottom_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/zepeto_oval"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/center_button"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/outline_expand_more_white_36"
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/center_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/white_oval"
+            app:layout_constraintBottom_toTopOf="@id/bottom_button"
+            app:layout_constraintEnd_toStartOf="@id/right_button"
+            app:layout_constraintStart_toEndOf="@id/left_button"
+            app:layout_constraintTop_toBottomOf="@id/top_button"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/outline_pinch_black_24"
+                />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,35 @@
+package com.naverz.showmethetext.view
+
+/**
+ * ShowMeTheText
+ * Copyright (c) 2022-present NAVER Z Corp.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * */
+
+import androidx.annotation.FontRes
+import com.naverz.showmethetext.R
+
+enum class FontStyle(
+    val fullName: String,
+    val shortName: String,
+    @FontRes val fontRes: Int,
+    ) {
+    // todo : set custom font or...
+    DEFAULT("Default", "D", -1),
+
+    // fixme : add font styles
+    BOLD("Bold", "B", -1),
+    MEDIUM("Medium", "M", -1),
+    REGULAR("Regular", "R", -1)
+}

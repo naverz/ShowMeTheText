@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="fontStyle"
+            type="com.naverz.showmethetext.view.FontStyle"
+            />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/fade_black"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:paddingStart="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="16dp"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/font_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toTopOf="@id/text_size_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/change_font_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/outline_change_circle_white_18"
+                            />
+
+                        <TextView
+                            android:id="@+id/font_style_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="@{fontStyle.fullName}"
+                            android:textColor="@color/white"
+                            android:visibility="gone"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/change_font_icon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Regular"
+                            />
+
+                        <FrameLayout
+                            android:id="@+id/keyboard_button"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/outline_keyboard_white_18"
+                                />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/position_button"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:clickable="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/position_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/outline_open_with_white_18"
+                                app:tint="@color/zepeto"
+                                />
+
+                        </FrameLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <TextView
+                        android:id="@+id/text_size_title"
+                        style="@style/SettingTitleStyle"
+                        android:text="Text size (sp)"
+                        app:layout_constraintBottom_toTopOf="@id/text_size_bar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/font_layout"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_size_value"
+                        style="@style/SettingValueStyle"
+                        app:layout_constraintBottom_toTopOf="@id/text_size_bar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/text_size_title"
+                        tools:text="40"
+                        />
+
+                    <SeekBar
+                        android:id="@+id/text_size_bar"
+                        style="@style/SeekbarStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:max="40"
+                        android:progress="18"
+                        app:layout_constraintBottom_toTopOf="@id/height_title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text_size_title"
+                        />
+
+                    <TextView
+                        android:id="@+id/height_title"
+                        style="@style/SettingTitleStyle"
+                        android:text="Line space (sp)"
+                        app:layout_constraintBottom_toTopOf="@id/line_space_bar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text_size_bar"
+                        />
+
+                    <TextView
+                        android:id="@+id/line_space_value"
+                        style="@style/SettingValueStyle"
+                        android:text="0.0"
+                        app:layout_constraintBottom_toTopOf="@id/line_space_bar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/height_title"
+                        />
+
+                    <SeekBar
+                        android:id="@+id/line_space_bar"
+                        style="@style/SeekbarStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:max="10"
+                        android:progress="0"
+                        app:layout_constraintBottom_toTopOf="@id/text_width_title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/height_title"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_width_title"
+                        style="@style/SettingTitleStyle"
+                        android:text="Text box width (dp)"
+                        app:layout_constraintBottom_toTopOf="@id/text_width_bar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/line_space_bar"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_width_value"
+                        style="@style/SettingValueStyle"
+                        app:layout_constraintBottom_toTopOf="@id/text_width_bar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/text_width_title"
+                        tools:text="100"
+                        />
+
+                    <SeekBar
+                        android:id="@+id/text_width_bar"
+                        style="@style/SeekbarStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:max="400"
+                        app:layout_constraintBottom_toTopOf="@id/alpha_title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text_width_title"
+                        />
+
+                    <TextView
+                        android:id="@+id/alpha_title"
+                        style="@style/SettingTitleStyle"
+                        android:text="Background Alpha"
+                        app:layout_constraintBottom_toTopOf="@id/alpha_bar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text_width_bar"
+                        />
+
+                    <TextView
+                        android:id="@+id/alpha_value"
+                        style="@style/SettingValueStyle"
+                        app:layout_constraintBottom_toTopOf="@id/alpha_bar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/alpha_title"
+                        tools:text="100"
+                        />
+
+                    <SeekBar
+                        android:id="@+id/alpha_bar"
+                        style="@style/SeekbarStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="100"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/alpha_title"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/confirm_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/zepeto"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="save"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</layout>
