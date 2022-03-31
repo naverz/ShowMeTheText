@@ -1,4 +1,4 @@
-# 프로젝트 제작 목표
+# 프로젝트 목표
 안드로이드에서 텍스트 디자인 작업 시 매번 발생하는 문제가 있습니다. 제플린 / 피그마와 같은 디자인 툴에서 제공하는 텍스트 컴포넌트와 안드로이드의 텍스트 컴포넌트 간 미세한 간격차이가 존재하여 가이드 대로 작업하여도 디자이너가 의도했던 결과물대로 구현되지 않는 것입니다.
 
 이 문제로 인해 텍스트 간격을 맞추고자 반복적인 커뮤니케이션 비용이 발생하고 있습니다.
@@ -20,6 +20,22 @@
 * 앱에서 제공하는 텍스트 컴포넌트는 **includeFontPadding** 옵션이 **true** 로 설정되어 있습니다.
 * 앱 사용 중 오류 발생 시, 오류화면에서 제공하는 에러로그를 **Github Issue**에 남겨주시면 빠르게 확인 및 수정이 가능합니다.
 * Custom font (*.ttf) 를 사용하고 있을 경우 **FontStyle** 필드를 통해 적용이 가능합니다.
+
+# Preview
+### 1. Sample Text Unit 생성
+<p>
+    <img src="https://user-images.githubusercontent.com/27072782/161017353-ca1a36c5-3222-4f5f-80e1-4db7bccb712b.jpg" width="300">
+</p>
+
+### 2. Text Unit 세부 설정
+<p>
+    <img src="https://user-images.githubusercontent.com/27072782/161017829-690add61-f158-473a-a5eb-ce316fe317bb.jpg" width="300">
+</p>
+
+### 3. 최소화 모드
+</p>
+    <img src="https://user-images.githubusercontent.com/27072782/161018001-36df5861-b0f1-4f0c-af57-b5cc83e03105.jpg" width="300">
+</p>
 
 # 라이선스
 ```
